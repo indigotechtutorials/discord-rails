@@ -9,6 +9,8 @@ class User < ApplicationRecord
   has_many :owned_servers, class_name: "Server", foreign_key: "owner_id"
   has_many :server_memberships, class_name: "Server::Membership"
   has_many :joined_servers, through: :server_memberships, source: :server
+
+  has_one_attached :avatar
 private
 
   def set_user_numbers

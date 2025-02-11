@@ -5,11 +5,7 @@ export default class extends Controller {
   static targets = ["sidebar"]
 
   connect() {
-    this.sidebarOpened = false
-  }
-
-  sidebarTargetConnected() {
-    this.toggleClass()
+    this.sidebarOpened = true
   }
 
   toggle(e) {
